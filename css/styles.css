@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff: "Raleway", sans-serif;
+    --progress-bar-appearance:  hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --light-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --blue: hsl(228, 56%, 26%);
+    --dark-blue: hsl(229, 57%, 11%);
+    --first-gradient:hsl(6, 100%, 80%);
+    --last-gradient: hsl(335, 100%, 65%);
+    --box-shadow: 0 24px 48px var(--dark-blue);
+}
+
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--ff);
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat center / cover, hsl(229, 57%, 11%);
+    min-height: 100vh;
+    max-height: 667px;
+
+}
+
+
+
+.flyo {
+    max-width: 100%;
+    width: 325px;
+    text-align: left;
+    padding: 2.5rem 6rem 2.5rem 2rem;
+    border-radius: 12px 90px 12px 12px;
+    background-color: var(--blue);
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+    
+}
+
+
+.icons {
+    display: flex;
+    align-items: center; 
+    margin: 20px 0 0 0;
+    width: 100%;
+    gap: 1rem;
+}
+
+
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.storage-card {
+    width: 325px;
+    padding: 2rem 2rem 3.5rem 2rem;
+    background-color: var(--blue);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.storage-p {
+    text-align: center;
+    color: var(--light-blue);
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    
+}
+.storage-p span {
+    font-weight: 600;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    height: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.35);
+     background:hsl(229 57% 16%);
+    padding: 3px;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 81.5%;
+   background:  linear-gradient(90deg,var(--first-gradient), var(--last-gradient));
+   border-radius: 10px;
+   outline: 2px solid var(--dark-blue);
+   position: relative;
+}
+.progress-fill::after {
+    position: absolute;
+    content: "";
+    right: 6px;
+    top: 50%;
+    background: white;
+    box-shadow: 0 0 0 4px var(--light-blue);
+    transform: translateY(-50%);
+    border-radius:50%;
+    width: 3px;
+    height: 3px;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-blue);
+    font-weight: 500;
+    font-size: 0.7rem;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+
+.white-box {
+    border: 1px solid red;
+    width: 125px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: .75rem;
+}
