@@ -20,14 +20,20 @@
 }
 
  body {
-    background-color: var(--blue);
+    background: var(--blue);
     background-image: url(../images/bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin: 0;
     overflow-x: hidden; */
+    /* use linear gradient for the background
+    image possibility inside the media query.  */
+    
 }
 
 
@@ -38,10 +44,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
     font-family: var(--ff);
-    min-height: 100vh;
-    min-width: 375px;
+    width: 100%;
+    
+    border: 1px solid red;
+    z-index: 1;
 }
 
 
@@ -86,7 +94,7 @@
 
 .storage-card {
     width: 90%;
-    max-width: 450px; 
+    max-width: 500px; 
     padding: 2rem 2rem 3rem 2rem;
     background-color: var(--blue);
     border-radius: 10px;
@@ -169,7 +177,7 @@
 
 
 
-@media (min-width:700px){
+@media (min-width:1050px){
     body {
         background-color: var(--dark-blue);
      min-height:100vh;
@@ -195,11 +203,23 @@
     }
 
     .page {
-
-
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
         position: relative;
-        z-index: 1;
+        width: 1000px;
+        padding: 1rem;
         
+    }
+    .flyo {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    .white-box {
+        position: absolute;
+        top: 50px;
+        right: 150px;
     }
     
 
@@ -215,7 +235,6 @@
 .footer {
     position: fixed;
     bottom: 0;
-    text-align: center;
     padding: .75rem;
     font-size: 0.7rem;
 } 
