@@ -29,11 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0;
-    overflow-x: hidden; */
-    /* use linear gradient for the background
-    image possibility inside the media query.  */
-    
+    min-height: 100vh;
 }
 
 
@@ -46,31 +42,29 @@
     align-items: center;
     
     font-family: var(--ff);
+    max-width: 1050px;
     width: 100%;
-    
-    border: 1px solid red;
-    z-index: 1;
+    padding: 0.5rem;
 }
 
 
 
 .flyo {
     max-width: 375px;
-    width: 90%;
+    width: 100%;
     text-align: left;
     padding: 2.5rem 6rem 2.5rem 2rem;
     border-radius: 12px 90px 12px 12px;
     background-color: var(--blue);
     margin-bottom: 20px;
     box-shadow: var(--box-shadow);
-    
 }
 
 
 .icons { 
-    display: flex;
-    margin: 20px 0 0 0;
-    width: 100%;
+   display: flex;
+    margin: 20px 0 0;
+    min-width: 200px;
     gap: 1rem;
 }
 
@@ -93,7 +87,7 @@
 
 
 .storage-card {
-    width: 90%;
+    width: 100%;
     max-width: 500px; 
     padding: 2rem 2rem 3rem 2rem;
     background-color: var(--blue);
@@ -157,12 +151,16 @@
     background-color: var(--white);
     border-radius: 5px;
     padding: 0.6rem;
-    width: 150px;
+    min-width: 140px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: -2rem;
+    position: relative;
 }
+
+
+
 
 .bold {
     font-weight: 700;
@@ -177,38 +175,27 @@
 
 
 
-@media (min-width:1050px){
-    body {
-        background-color: var(--dark-blue);
-     min-height:100vh;
-     position: relative;
+@media (min-width:1050px) {
+  body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, var(--dark-blue) 0 100%), url(../images/bg-desktop.png);
+     background-repeat: no-repeat, no-repeat; 
+     background-size: 100% 50%, 100% 50%;
+    background-position: top, bottom; 
+    background-color: var(--dark-blue); 
+    
+  }
 
-    }
 
-    body::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 50vh;
-        background-image:  url(../images/bg-desktop.png);
-        background-repeat: no-repeat;
-        background-position: bottom / center ;
-        background-size: cover;
-        z-index: 0;
-        pointer-events: none;
 
-    }
 
     .page {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         position: relative;
-        width: 1000px;
-        padding: 1rem;
+        
+        padding: 0.5rem;
         
     }
     .flyo {
@@ -219,11 +206,28 @@
     .white-box {
         position: absolute;
         top: 50px;
-        right: 150px;
+        right: 125px;
     }
-    
+
+    .speech-bubble {
+    height: 20px;
+    width: 20px;
+    border-right: 30px solid white;
+    border-left: 31px solid transparent;
+    border-bottom: 30px solid 
+    transparent;
+    top: 50px;
+    left: 79px;
+    position: absolute;
 
 }
+
+.storage-p {
+    text-align: left;
+}
+}
+
+
 
 
 
@@ -236,6 +240,22 @@
     position: fixed;
     bottom: 0;
     padding: .75rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    color: white;
 } 
 
+.footer a {
+    color: #00FFFF;
+    text-decoration: none;
+    font-style: italic;
+}
+.footer a:hover {
+    display: inline-block;
+    opacity: 0.8;
+    background: linear-gradient(90 deg, #00eaff, #ff2d95);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+    transition: transform 0.5s ease ;
+    transform: scale(1.2);
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
