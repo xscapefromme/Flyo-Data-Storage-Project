@@ -44,4 +44,7 @@ Learned better organization for div elements and utilizing classes for styling. 
 
 Need to just keep practcicing. Praciticing structuring properly because thats the overall foundation and if thats not right everything else is going to be difficult than what it really is. Understanding a lot everything starting to click and also practicing media queries and mobile first projects is something that im looking at building more of. 
 
+*Edit*
+For the flyo storage card and the top container don't a set height but do padding so the text doesn't overflow. Grow the height with line height. Need to look at that and just fine tune responsivness. Doing better. Don't set a set width either.   
+
 
